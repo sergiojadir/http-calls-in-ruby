@@ -1,0 +1,19 @@
+<h1>Informations about: <%= @product.name %></h1>
+	
+<div class="row">
+	<div class="col-md-2">Tags: </div><div class="col-md-10"><%= @product.tags %></div>
+</div>
+<div class="row">
+	<div class="col-md-2">Price in cents: </div><div class="col-md-10"><%= @product.price_in_cents %></div>
+</div>
+<div class="row">
+	<div class="col-md-2">Bonus reward miles: </div><div class="col-md-10"><%= @product.bonus_reward_miles %></div>
+</div>
+<div class="row">
+	<div class="col-md-2">Volume in milliliters: </div><div class="col-md-10"><%= @product.volume_in_milliliters %></div>
+</div>
+<div class="row">	
+	<div class="col-md-2">Alcohol content: </div><div class="col-md-10"><%= @product.alcohol_content %></div>
+</div>
+
+<%= link_to 'Back', :back, class: 'btn btn-danger' %>

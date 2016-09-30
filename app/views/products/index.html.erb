@@ -1,0 +1,21 @@
+<h1>LcboApi - Products list</h1>
+<hr>
+<div class="row">
+	<div class="table-responsive">
+		<table class="table table-striped" style="width:100%" id="t01">
+			<tr>
+				<th>Name</th>
+				<th>Tags</th>
+				<th></th>
+			</tr>
+			<% @products.each do |product| %>
+				<tr>
+					<td><%= product.name %></td>
+					<td><%= product.tags.map { |p| p.titleize }.join(", ") %></td>
+					<td><%= link_to 'View', product_path(product.id) %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+<%= paginate @pages, theme: 'twitter-bootstrap-4' %>
